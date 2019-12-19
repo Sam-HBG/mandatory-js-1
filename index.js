@@ -14,10 +14,10 @@ linkEl.href= '#Vegetables';
 //Sektionerna `#contact` och `#about` är i fel ordning. Byt plats på dem.
 
 const aboutEl = document.getElementById("about");
-const contactEL = document.getElementById("contact");
-const mainEL = document.getElementById("main");
+const contactEl = document.getElementById("contact");
+const mainEl = document.getElementById("main");
 
-mainEL.insertBefore(aboutEl, contactEL);
+mainEl.insertBefore(aboutEl, contactEl);
 
 //Lättare sätt att skriva detta 
 //document.getElementById("main").insertBefore(document.getElementById("about"), document.getElementById("contact"));
@@ -29,7 +29,14 @@ mainEL.insertBefore(aboutEl, contactEL);
 
 const aboutH2 = document.createElement("h2");
 aboutH2.textContent = "About";
+console.log(aboutEl, document.getElementById("about"));
 document.getElementById("about").prepend(aboutH2);
+
+
+const contactH2 = document.createElement("h2");
+contactH2.textContent = "Contact";
+console.log(aboutEl, document.getElementById("conact"));
+document.getElementById("contact").prepend(contactH2);
 
 
 //Texten "We're the best in fruits & vegetables" under `#about` ska omslutas med en `p`-tagg
