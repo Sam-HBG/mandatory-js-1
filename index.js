@@ -29,25 +29,23 @@ mainEl.insertBefore(aboutEl, contactEl);
 
 const aboutH2 = document.createElement("h2");
 aboutH2.textContent = "About";
-console.log(aboutEl, document.getElementById("about"));
-document.getElementById("about").prepend(aboutH2);
+aboutEl.prepend(aboutH2);
 
 
 const contactH2 = document.createElement("h2");
 contactH2.textContent = "Contact";
-console.log(aboutEl, document.getElementById("conact"));
-document.getElementById("contact").prepend(contactH2);
+contactEl.prepend(contactH2);
 
 
 //Texten "We're the best in fruits & vegetables" under `#about` ska omslutas med en `p`-tagg
 
 let newAboutText = document.createElement("p");
 newAboutText.textContent = "We're the best in fruits & vegetables";
-document.getElementById("about").appendChild(newAboutText);
+aboutEl.appendChild(newAboutText);
 
 // Ta bort texten utan för <p></p>
 
-document.getElementById("about").childNodes[1].remove();
+aboutEl.childNodes[1].remove();
 
 //Utvecklaren använde `td`-element i `thead` istället för `th`. Fixa det.
 
